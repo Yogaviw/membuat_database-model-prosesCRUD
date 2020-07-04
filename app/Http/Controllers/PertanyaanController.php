@@ -15,10 +15,10 @@ class PertanyaanController extends Controller
         
         return view('crud.form_pertanyaan');
     }
-//     public function store(Request $request){
-//         $data = $request->all();
-//         unset($data["token"]);
-//         PertanyaanModel::save($data);
-//         return redirect('/pertanyaan');
-//     }
+    public function store(Request $request){
+        $data = $request->all();
+        unset($data["token"]);
+        PertanyaanModel::save($data);
+        return redirect('/pertanyaan');
+    }
  }
